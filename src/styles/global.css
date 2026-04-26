@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  /* Fondo oscuro profundo */
+  --color-teto-bg: #020617;     
+  /* Azul principal vibrante */
+  --color-teto-blue: #3b82f6;   
+  /* Azul oscuro para tarjetas */
+  --color-teto-card: #0f172a;   
+  /* Azul claro para acentos */
+  --color-teto-accent: #60a5fa; 
+}
+
+/* Forzar el fondo en el body */
+@layer base {
+  body {
+    @apply bg-teto-bg text-slate-200 antialiased;
+  }
+}

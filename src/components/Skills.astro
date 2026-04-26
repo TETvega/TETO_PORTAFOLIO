@@ -1,0 +1,106 @@
+---
+import { ui } from '../utils/i18n';
+
+// Renderizamos con 'es' por defecto; el script de cliente sobreescribe al vuelo
+const t = ui['es'];
+
+const skills = [
+  {
+    categoryKey: 'skills.backend',
+    items: [
+      { name: 'C# / .NET',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
+      { name: 'Node.js',         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Python',          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { name: 'JavaScript',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    ],
+  },
+  {
+    categoryKey: 'skills.frontend',
+    items: [
+      { name: 'React / Native',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'TypeScript',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+      { name: 'Astro',           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg' },
+      { name: 'HTML & CSS',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+    ],
+  },
+  {
+    categoryKey: 'skills.frameworks',
+    items: [
+      { name: 'Entity Framework', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
+      { name: 'Hapi FHIR',        icon: 'https://hapifhir.io/hapi-fhir/images/logos/layered-logo-64.png' },
+      { name: 'Tailwind CSS',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'Bootstrap',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+      { name: 'Orval / TanStack', icon: 'https://orval.dev/logo.png' },
+    ],
+  },
+  {
+    categoryKey: 'skills.data',
+    items: [
+      { name: 'PostgreSQL',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+      { name: 'Oracle SQL',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
+      { name: 'MySQL',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+      { name: 'MongoDB',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    ],
+  },
+  {
+    categoryKey: 'skills.devtools',
+    items: [
+      { name: 'Docker',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+      { name: 'Linux (Ubuntu)', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+      { name: 'Git / GitHub',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+    ],
+  },
+  {
+    categoryKey: 'skills.others',
+    items: [
+      { name: 'Postman',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
+      { name: 'VS Code',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'Figma',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    ],
+  },
+];
+---
+
+<section id="skills" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="mb-16">
+    <!-- El data-i18n le dice al script global qué key actualizar -->
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.skills">
+      {t['section.skills']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {skills.map((group) => (
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-hector-primary/30 transition-all duration-300 group">
+
+        <!-- Título de categoría con data-i18n correcto -->
+        <h3
+          class="text-hector-primary font-bold mb-8 uppercase tracking-widest text-xs border-b border-white/5 pb-3"
+          data-i18n={group.categoryKey}
+        >
+          {t[group.categoryKey]}
+        </h3>
+
+        <div class="grid grid-cols-2 gap-y-6 gap-x-4">
+          {group.items.map((skill) => (
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex-shrink-0 bg-white/5 rounded-lg p-1.5 group-hover:bg-hector-primary/10 transition-colors">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all"
+                  loading="lazy"
+                />
+              </div>
+              <span class="text-sm text-gray-400 group-hover:text-white transition-colors">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    ))}
+  </div>
+</section>

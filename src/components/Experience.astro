@@ -1,0 +1,89 @@
+---
+import { ui } from '../utils/i18n';
+const t = ui['es'];
+---
+
+<section id="experiencia" class="max-w-6xl mx-auto px-6 py-24">
+
+  <!-- Encabezado -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.experience">
+      {t['section.experience']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+  </div>
+
+  <!-- Timeline wrapper -->
+  <div class="relative">
+
+    <!-- Línea vertical de la timeline -->
+    <div class="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-hector-primary/50 via-white/10 to-transparent"></div>
+
+    <!-- ── Entrada 1 ───────────────────────────────────────── -->
+    <article class="relative pl-8 md:pl-24 pb-16 group">
+
+      <!-- Dot en la línea -->
+      <div class="absolute left-[-5px] md:left-[27px] top-1.5 w-3 h-3 rounded-full bg-hector-primary ring-4 ring-hector-dark group-hover:scale-125 transition-transform duration-300"></div>
+
+      <!-- Card -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-hector-primary/30 transition-all duration-300">
+
+        <!-- Header de la card -->
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-white font-bold text-xl leading-tight" data-i18n="exp.cmf.role">
+              {t['exp.cmf.role']}
+            </h3>
+            <p class="text-hector-primary font-semibold text-sm mt-1 tracking-wide" data-i18n="exp.cmf.company">
+              {t['exp.cmf.company']}
+            </p>
+            <p class="text-gray-500 text-xs mt-0.5" data-i18n="exp.cmf.location">
+              {t['exp.cmf.location']}
+            </p>
+          </div>
+
+          <!-- Badges de fechas -->
+          <div class="flex flex-col items-start md:items-end gap-2 flex-shrink-0">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-hector-primary bg-hector-primary/10 border border-hector-primary/20 px-3 py-1 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span data-i18n="exp.cmf.period1">{t['exp.cmf.period1']}</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-hector-primary bg-hector-primary/10 border border-hector-primary/20 px-3 py-1 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span data-i18n="exp.cmf.period2">{t['exp.cmf.period2']}</span>
+            </span>
+            <span class="text-gray-500 text-xs font-medium" data-i18n="exp.cmf.duration">
+              {t['exp.cmf.duration']}
+            </span>
+          </div>
+        </div>
+
+        <!-- Logros / bullets -->
+        <ul class="space-y-3">
+          {[1,2,3,4,5].map((n) => (
+            <li class="flex items-start gap-3 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-hector-primary/60 flex-shrink-0"></span>
+              <span data-i18n={`exp.cmf.bullet${n}`}>{t[`exp.cmf.bullet${n}`]}</span>
+            </li>
+          ))}
+        </ul>
+
+        <!-- Tag de tipo de empleo -->
+        <div class="mt-6 pt-5 border-t border-white/5 flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-500" data-i18n="exp.cmf.type">
+            {t['exp.cmf.type']}
+          </span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-500">USAID</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-500">Excel / VBA</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-500">Coaching</span>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>

@@ -1,0 +1,411 @@
+export const ui = {
+  es: {
+    // Nav
+    'nav.projects':     'Proyectos',
+    'nav.experience':   'Experiencia',
+    'nav.skills':       'Stack',
+    'nav.softskills':   'Habilidades',
+    'nav.education':    'Educación',
+    'nav.courses':      'Cursos',
+    'nav.awards':       'Premios',
+    'nav.volunteering': 'Voluntariados',
+
+    // Hero
+    'hero.name':     'HECTOR RENE ',
+    'hero.lastname': 'MARTINEZ',
+    'hero.roles':    'Ingeniero de Sistemas | Full Stack Developer | AI Engineer',
+    'hero.alias':    'Conocido en el mundo dev como "Teto"',
+    'hero.cv':       'Descargar CV',
+
+    // Secciones
+    'section.skills':              'Stack Tecnológico',
+    'section.softskills':          'Habilidades Blandas',
+    'section.softskills.subtitle': 'Más allá del código las habilidades que hacen la diferencia en equipo.',
+
+    // Hard-skill categories
+    'skills.backend':    'Backend (Core)',
+    'skills.frontend':   'Frontend & Mobile',
+    'skills.data':       'Data (Databases)',
+    'skills.devtools':   'DevOps & Herramientas',
+    'skills.frameworks': 'Frameworks & Libs',
+    'skills.others':     'Otras Herramientas',
+
+    // Secciones nuevas
+    'section.experience':              'Experiencia Profesional',
+    'section.volunteering':            'Voluntariados',
+    'section.volunteering.subtitle':   'Compromiso más allá del trabajo — aportando a la comunidad.',
+    // Awards section
+    'section.awards': 'Premios y Distinciones',
+ 
+    'award.math.category': 'Mención Honorífica',
+    'award.math.date':     '15–17 de noviembre de 2019',
+    'award.math.title':    'XVII Olimpiada Hondureña de Matemática – Nivel II',
+    'award.math.event':    'Olimpiada Hondureña de Matemática',
+    'award.math.org':      'Comité de Ciencias Matemáticas – Universidad Pedagógica Nacional Francisco Morazán',
+ 
+    'award.coach.category': 'Reconocimiento',
+    'award.coach.date':     'Septiembre 2023',
+    'award.coach.title':    'Coach Laboral – Proyecto "Creando Mi Futuro Aquí"',
+    'award.coach.org':      'USAID Honduras',
+    'award.coach.session1': 'Generación de confianza',
+    'award.coach.session2': 'Identificación de objetivos y metas',
+    'award.coach.session3': 'Implementación de planes de carrera',
+ 
+    // Languages
+    'award.languages.label': 'Idiomas',
+    'award.lang.es':         'Español',
+    'award.lang.es.level':   'Nativo',
+    'award.lang.en':         'Inglés',
+    'award.lang.en.level':   'Intermedio – Avanzado',
+    'award.lang.zh':         'Chino',
+    'award.lang.zh.level':   'Introductorio',
+    // Experiencia – Creando Mi Futuro / USAID
+    'exp.cmf.role':     'Pasante del Programa de Pasantía',
+    'exp.cmf.company':  'Creando Mi Futuro Aquí / USAID',
+    'exp.cmf.location': 'Santa Rosa de Copán, Honduras',
+    'exp.cmf.period1':  'Jul 2023 – Nov 2023',
+    'exp.cmf.period2':  'Ene 2024 – Jul 2024',
+    'exp.cmf.duration': '11 meses en total',
+    'exp.cmf.type':     'Pasantía',
+    'exp.cmf.bullet1':  'Brindé asistencia técnica en la ejecución de actividades metodológicas en centros educativos y con empresas socias del proyecto.',
+    'exp.cmf.bullet2':  'Desarrollé una macro en Excel para automatizar la generación de diplomas y limpieza de datos, mejorando procesos internos.',
+    'exp.cmf.bullet3':  'Apoyé en el mejoramiento de procesos operativos del equipo técnico.',
+    'exp.cmf.bullet4':  'Realicé llamadas de seguimiento brindando asesoría básica en coaching educativo a participantes.',
+    'exp.cmf.bullet5':  'Demostré responsabilidad, compromiso y actitud proactiva en todas las funciones asignadas.',
+
+    // Voluntariados
+    'vol.navidad.title': 'Navidad en Pediatría',
+    'vol.navidad.org':   'Hospital de Occidente · Org. por Lic. José Leonardo Girón ("Totopostio")',
+    'vol.navidad.desc':  'Participación en la jornada de Navidad para niños hospitalizados, llevando alegría y apoyo emocional a pacientes del área de pediatría.',
+    'vol.copan.title':   'Jornada Copán Libre de Virus 2024',
+    'vol.copan.org':     'Carrera de Ingeniería en Sistemas – Campus Copán, UNAH',
+    'vol.copan.desc':    'Jornada de apoyo técnico y social comunitario enfocada en brindar mantenimiento de equipos y orientación tecnológica a la comunidad.',
+
+    // Soft skills
+    'softskills.leadership':              'Liderazgo',
+    'softskills.leadership.desc':         'Capacidad de guiar equipos, tomar decisiones bajo presión y llevar proyectos a buen puerto.',
+    'softskills.teamwork':                'Trabajo en equipo',
+    'softskills.teamwork.desc':           'Colaboración activa, escucha empática y disposición para apoyar a mis compañeros.',
+    'softskills.communication':           'Comunicación efectiva',
+    'softskills.communication.desc':      'Claridad para transmitir ideas técnicas y no-técnicas a distintos tipos de audiencia.',
+    'softskills.problemsolving':          'Resolución de problemas',
+    'softskills.problemsolving.desc':     'Análisis sistemático, pensamiento crítico y creatividad para encontrar soluciones óptimas.',
+    'softskills.adaptability':            'Adaptabilidad',
+    'softskills.adaptability.desc':       'Capacidad de aprender rápido, ajustarme a nuevas tecnologías y contextos cambiantes.',
+    'softskills.selftaught':              'Autodidacta',
+    'softskills.selftaught.desc':         'Hábito constante de aprendizaje autónomo: cursos, documentación, proyectos propios.',
+
+    // Proyectos
+    'section.projects': 'Proyectos',
+    'proj.readmore':    'Ver más',
+    'proj.readless':    'Ver menos',
+    'proj.private':     'Privado',
+    'proj.opensource':  'Open Source',
+    'proj.private.note':'Repositorio privado — proyecto en entorno empresarial/académico.',
+    'proj.status.active':   'En desarrollo',
+    'proj.status.finished': 'Finalizado',
+ 
+    // SIGREF
+    'proj.sigref.title': 'SIGREF',
+    'proj.sigref.role':  'Líder de Proyecto · Backend Developer · QA',
+    'proj.sigref.short': 'Sistema de gestión hospitalaria que implementa las normativas FHIR R4/R5 y HL7, con autenticación centralizada mediante Keycloak y despliegue en contenedores Docker.',
+    'proj.sigref.long':  'Arquitectura REST en C# con intercomunicación hacia PostgreSQL como base principal y MongoDB para auditoría. Integra HapiFHIR Server como núcleo de interoperabilidad y Hangfire para tareas diferidas. Módulos: gestión de pacientes, ingresos, empleados, usuarios, organizaciones y reportes pesados. Frontend en React + TypeScript + Tailwind. Lideré el proyecto durante los primeros 6 meses definiendo arquitectura, onboarding del equipo y revisiones de calidad.',
+ 
+    // ClassNotes
+    'proj.classnotes.title': 'ClassNotes',
+    'proj.classnotes.role':  'Full Stack Developer',
+    'proj.classnotes.short': 'Plataforma de gestión académica para docentes y estudiantes con asistencia por geolocalización avanzada y generación de QR por sesión.',
+    'proj.classnotes.long':  'API REST en C# con SQL Server. Frontend web en React + TypeScript + Tailwind y app móvil en React Native. Funcionalidades clave: delimitación de áreas geográficas para registrar asistencia, generación y lectura de QR, gestión de calificaciones, envío de notas por correo, múltiples centros y aulas, roles diferenciados de docente y estudiante.',
+ 
+    // Rentals
+    'proj.rentals.title': 'FernandaRentals',
+    'proj.rentals.role':  'Full Stack Developer',
+    'proj.rentals.short': 'Sistema de gestión de inventario y alquiler de artículos con catálogo interactivo para clientes, cotizaciones en tiempo real y pasarela de pago mediante PayPal.',
+    'proj.rentals.long':  'Backend en C# con SQL Server. Frontend en JavaScript + Tailwind con calendario en tiempo real (FullCalendar) para visualizar disponibilidad de artículos. Portal de clientes para explorar catálogos, ver productos y realizar cotizaciones. Módulos: gestión de clientes, empleados, reservas, panel de ingresos/egresos y KPIs principales.',
+    // ── Educación
+    'section.education': 'Educación',
+    'edu.status.inprogress': 'En curso',
+    'edu.status.finished':   'Finalizado',
+ 
+    'edu.unah.institution': 'Universidad Autónoma de Honduras (UNAH)',
+    'edu.unah.degree':      'Ingeniería en Sistemas',
+    'edu.unah.period':      '2023 – Actualidad',
+    'edu.unah.progress':    'Carrera completada',
+    'edu.unah.h1': 'Programación orientada a objetos con C# y .NET Framework.',
+    'edu.unah.h2': 'Desarrollo de aplicaciones móviles con React Native.',
+    'edu.unah.h3': 'Bases de datos relacionales: modelado, SQL y administración.',
+    'edu.unah.h4': 'Fundamentos de algoritmos y estructuras de datos.',
+ 
+    'edu.admon.institution': 'Universidad Autónoma de Honduras (UNAH)',
+    'edu.admon.degree':      'Lic. Administración y Gestión de Empresas',
+    'edu.admon.period':      'En curso – Segunda carrera',
+    'edu.admon.progress':    'Carrera completada',
+    'edu.admon.h1': 'Contabilidad básica aplicada al contexto hondureño.',
+    'edu.admon.h2': 'Gestión de KPIs, capital y gestión humana.',
+ 
+    'edu.bach.institution': 'Instituto Departamental Álvaro Contreras',
+    'edu.bach.degree':      'Bachillerato Técnico Profesional en Informática',
+    'edu.bach.period':      '2019 – 2022 · Promedio: 89%',
+    'edu.bach.progress':    'Completado',
+    'edu.bach.h1': 'Redes LAN: configuración, cableado estructurado y conectividad.',
+    'edu.bach.h2': 'Mantenimiento preventivo y correctivo de hardware y software.',
+    'edu.bach.h3': 'Fundamentos de programación: lógica, estructuras de control y pseudocódigo.',
+    'edu.bach.h4': 'Diseño web: HTML, CSS y páginas estáticas.',
+ 
+    // ── Cursos y Certificaciones
+    'section.courses': 'Cursos y Certificaciones',
+    'cert.badges.label': 'Insignias Digitales Verificadas',
+ 
+    'cert.group.oracle': 'Oracle + Alura Latam',
+    'cert.oracle.title': 'Programa Oracle Next Education (ONE)',
+    'cert.oracle.org':   'Oracle + Alura Latam',
+    'cert.oracle.date':  'Finalizado: 24 de septiembre de 2023',
+    'cert.oracle.hours': '331 horas',
+    'cert.oracle.d1': 'Desarrollo personal y habilidades blandas.',
+    'cert.oracle.d2': 'Fundamentos de programación.',
+    'cert.oracle.d3': 'Business Agility y emprendimiento.',
+    'cert.oracle.d4': 'Java orientado a objetos.',
+    'cert.oracle.d5': 'Java con Spring Boot (G5).',
+ 
+    'cert.group.unah': 'UNAH',
+    'cert.unah.title': 'Taller de Soporte Técnico Computacional',
+    'cert.unah.org':   'Universidad Nacional Autónoma de Honduras',
+    'cert.unah.date':  'Finalizado: 23 de noviembre de 2023',
+    'cert.unah.hours': '20 horas',
+ 
+    'cert.group.infop': 'INFOP',
+    'cert.infop.org':   'INFOP',
+    'cert.infop.elec.title':  'Instalaciones Eléctricas Residenciales',
+    'cert.infop.elec.date':   'Finalizado: 9 de agosto de 2023',
+    'cert.infop.elec.hours':  '156 horas',
+    'cert.infop.web.title':   'Diseño Web con HTML5 y WordPress',
+    'cert.infop.web.date':    'Finalizado: 1 de marzo de 2024',
+    'cert.infop.web.hours':   '20 horas',
+    'cert.infop.cont.title':  'Contabilidad Básica 1 para No Contadores',
+    'cert.infop.cont.date':   'Finalizado: 15 de marzo de 2024',
+    'cert.infop.cont.hours':  '20 horas',
+    'cert.infop.act.title':   'Actitud Positiva con Inteligencia Emocional',
+    'cert.infop.act.date':    'Finalizado: 24 de noviembre de 2023',
+    'cert.infop.act.hours':   '20 horas',
+    'cert.infop.team.title':  'Trabajo en Equipo',
+    'cert.infop.team.date':   'Finalizado: 6 de septiembre de 2024',
+    'cert.infop.team.hours':  '20 horas',
+    'cert.infop.fin.title':   'Educación Financiera',
+    'cert.infop.fin.date':    'Finalizado: 9 de febrero de 2024 · USAID / ADELSAR / OIT',
+    'cert.infop.fin.hours':   '24 horas',
+ 
+    // Digital badges
+    'badge.os':      'Operating Systems Basics',
+    'badge.data':    'Introduction to Data Science',
+    'badge.network': 'Network Technician Career Path',
+    'badge.digital': 'Digital Immersion',
+    'badge.entrep':  'Entrepreneurship',
+    'badge.fintech': 'Fintech',
+  
+  },
+
+  en: {
+     // Nav
+    'nav.projects':     'Projects',
+    'nav.experience':   'Experience',
+    'nav.skills':       'Stack',
+    'nav.softskills':   'Skills',
+    'nav.education':    'Education',
+    'nav.courses':      'Courses',
+    'nav.awards':       'Awards',
+    'nav.volunteering': 'Volunteering',
+    // Hero
+    'hero.name':     'HECTOR RENE ',
+    'hero.lastname': 'MARTINEZ',
+    'hero.roles':    'Systems Engineer | Full Stack Developer | AI Engineer',
+    'hero.alias':    'Known in the dev world as "Teto"',
+    'hero.cv':       'Download CV',
+
+    // Sections
+    'section.skills':              'Tech Stack',
+    'section.softskills':          'Soft Skills',
+    'section.softskills.subtitle': 'Beyond the code the skills that make a difference in a team.',
+
+    // Hard-skill categories
+    'skills.backend':    'Backend (Core)',
+    'skills.frontend':   'Frontend & Mobile',
+    'skills.data':       'Data (Databases)',
+    'skills.devtools':   'DevOps & Tools',
+    'skills.frameworks': 'Frameworks & Libs',
+    'skills.others':     'Other Tools',
+     // Awards section
+    'section.awards': 'Awards & Distinctions',
+ 
+    'award.math.category': 'Honorable Mention',
+    'award.math.date':     'November 15–17, 2019',
+    'award.math.title':    'XVII Honduran Mathematics Olympiad – Level II',
+    'award.math.event':    'Honduran Mathematics Olympiad',
+    'award.math.org':      'Mathematics Sciences Committee – Universidad Pedagógica Nacional Francisco Morazán',
+ 
+    'award.coach.category': 'Recognition',
+    'award.coach.date':     'September 2023',
+    'award.coach.title':    'Labor Coach – "Creando Mi Futuro Aquí" Project',
+    'award.coach.org':      'USAID Honduras',
+    'award.coach.session1': 'Building trust',
+    'award.coach.session2': 'Identifying goals and objectives',
+    'award.coach.session3': 'Implementing career plans',
+ 
+    // Languages
+    'award.languages.label': 'Languages',
+    'award.lang.es':         'Spanish',
+    'award.lang.es.level':   'Native',
+    'award.lang.en':         'English',
+    'award.lang.en.level':   'Intermediate – Advanced',
+    'award.lang.zh':         'Chinese',
+    'award.lang.zh.level':   'Introductory',
+    // New sections
+    'section.experience':              'Professional Experience',
+    'section.volunteering':            'Volunteering',
+    'section.volunteering.subtitle':   'Commitment beyond work — giving back to the community.',
+
+    // Experience – Creando Mi Futuro / USAID
+    'exp.cmf.role':     'Internship Program Participant',
+    'exp.cmf.company':  'Creando Mi Futuro Aquí / USAID',
+    'exp.cmf.location': 'Santa Rosa de Copán, Honduras',
+    'exp.cmf.period1':  'Jul 2023 – Nov 2023',
+    'exp.cmf.period2':  'Jan 2024 – Jul 2024',
+    'exp.cmf.duration': '11 months total',
+    'exp.cmf.type':     'Internship',
+    'exp.cmf.bullet1':  'Provided technical assistance in the execution of methodological activities in educational centers and with partner companies.',
+    'exp.cmf.bullet2':  'Developed an Excel macro to automate diploma generation and data cleanup, improving internal processes.',
+    'exp.cmf.bullet3':  'Supported the improvement of operational processes within the technical team.',
+    'exp.cmf.bullet4':  'Conducted follow-up calls providing basic educational coaching guidance to program participants.',
+    'exp.cmf.bullet5':  'Demonstrated responsibility, commitment, and a proactive attitude across all assigned functions.',
+
+    // Volunteering
+    'vol.navidad.title': 'Christmas at Pediatrics',
+    'vol.navidad.org':   'Hospital de Occidente · Org. by Lic. José Leonardo Girón ("Totopostio")',
+    'vol.navidad.desc':  'Participated in a Christmas event for hospitalized children, bringing joy and emotional support to patients in the pediatrics ward.',
+    'vol.copan.title':   'Copán Virus-Free Drive 2024',
+    'vol.copan.org':     'Systems Engineering Program – Campus Copán, UNAH',
+    'vol.copan.desc':    'Community-focused technical and social drive providing equipment maintenance and technology guidance to local residents.',
+
+    // Soft skills
+    'softskills.leadership':              'Leadership',
+    'softskills.leadership.desc':         'Ability to guide teams, make decisions under pressure, and deliver projects successfully.',
+    'softskills.teamwork':                'Teamwork',
+    'softskills.teamwork.desc':           'Active collaboration, empathetic listening, and willingness to support teammates.',
+    'softskills.communication':           'Effective Communication',
+    'softskills.communication.desc':      'Clarity in conveying technical and non-technical ideas to diverse audiences.',
+    'softskills.problemsolving':          'Problem Solving',
+    'softskills.problemsolving.desc':     'Systematic analysis, critical thinking, and creativity to find optimal solutions.',
+    'softskills.adaptability':            'Adaptability',
+    'softskills.adaptability.desc':       'Quick learner, able to adjust to new technologies and changing environments.',
+    'softskills.selftaught':              'Self-Taught',
+    'softskills.selftaught.desc':         'Constant habit of autonomous learning: courses, documentation, personal projects.',
+
+
+    // Projects
+    'section.projects': 'Projects',
+    'proj.readmore':    'Read more',
+    'proj.readless':    'Read less',
+    'proj.private':     'Private',
+    'proj.opensource':  'Open Source',
+    'proj.private.note':'Private repository — enterprise / academic environment.',
+    'proj.status.active':   'In development',
+    'proj.status.finished': 'Finished',
+ 
+    // SIGREF
+    'proj.sigref.title': 'SIGREF',
+    'proj.sigref.role':  'Project Lead · Backend Developer · QA',
+    'proj.sigref.short': 'Hospital management system implementing FHIR R4/R5 and HL7 standards, with centralized authentication via Keycloak and Docker container deployment.',
+    'proj.sigref.long':  'REST architecture in C# communicating with PostgreSQL as the main database and MongoDB for auditing. Integrates HapiFHIR Server as the interoperability core and Hangfire for deferred tasks. Modules: patient management, admissions, staff, users, organizations, and heavy reporting. Frontend in React + TypeScript + Tailwind. Led the project for the first six months, defining architecture, team onboarding, and quality reviews.',
+ 
+    // ClassNotes
+    'proj.classnotes.title': 'ClassNotes',
+    'proj.classnotes.role':  'Full Stack Developer',
+    'proj.classnotes.short': 'Academic management platform for teachers and students featuring advanced geolocation-based attendance and per-session QR code generation.',
+    'proj.classnotes.long':  'REST API in C# with SQL Server. Web frontend in React + TypeScript + Tailwind and mobile app in React Native. Key features: geographic area delimitation for attendance, QR generation and scanning, grade management, email grade reports, multiple campuses and classrooms, distinct teacher and student roles.',
+ 
+    // Rentals
+    'proj.rentals.title': 'FernandaRentals',
+    'proj.rentals.role':  'Full Stack Developer',
+    'proj.rentals.short': 'Inventory and rental management system with an interactive client catalog, real-time quotes, and PayPal payment gateway.',
+    'proj.rentals.long':  'Backend in C# with SQL Server. Frontend in JavaScript + Tailwind with a real-time calendar (FullCalendar) for item availability. Client portal for browsing catalogs, viewing products, and requesting quotes. Modules: client and employee management, reservations, income/expense dashboard, and main KPIs.',
+    // ── Education
+    'section.education': 'Education',
+    'edu.status.inprogress': 'In progress',
+    'edu.status.finished':   'Completed',
+ 
+    'edu.unah.institution': 'National Autonomous University of Honduras (UNAH)',
+    'edu.unah.degree':      'Systems Engineering',
+    'edu.unah.period':      '2023 – Present',
+    'edu.unah.progress':    'Degree completed',
+    'edu.unah.h1': 'Object-oriented programming with C# and .NET Framework.',
+    'edu.unah.h2': 'Mobile application development using React Native.',
+    'edu.unah.h3': 'Relational databases: modeling, SQL queries, and administration.',
+    'edu.unah.h4': 'Algorithms fundamentals and data structures analysis.',
+ 
+    'edu.admon.institution': 'National Autonomous University of Honduras (UNAH)',
+    'edu.admon.degree':      'B.S. Business Administration & Management',
+    'edu.admon.period':      'In progress – Second degree',
+    'edu.admon.progress':    'Degree completed',
+    'edu.admon.h1': 'Basic accounting applied to the Honduran context.',
+    'edu.admon.h2': 'KPI management, capital, and human resources.',
+ 
+    'edu.bach.institution': 'Instituto Departamental Álvaro Contreras',
+    'edu.bach.degree':      'Technical High School Diploma in Computer Science',
+    'edu.bach.period':      '2019 – 2022 · GPA: 89%',
+    'edu.bach.progress':    'Completed',
+    'edu.bach.h1': 'LAN networks: setup, structured cabling, and connectivity.',
+    'edu.bach.h2': 'Preventive and corrective hardware/software maintenance.',
+    'edu.bach.h3': 'Programming fundamentals: logic, control structures, pseudocode.',
+    'edu.bach.h4': 'Web design: HTML, CSS, and static page development.',
+ 
+    // ── Courses & Certifications
+    'section.courses': 'Courses & Certifications',
+    'cert.badges.label': 'Verified Digital Badges',
+ 
+    'cert.group.oracle': 'Oracle + Alura Latam',
+    'cert.oracle.title': 'Oracle Next Education Program (ONE)',
+    'cert.oracle.org':   'Oracle + Alura Latam',
+    'cert.oracle.date':  'Completed: September 24, 2023',
+    'cert.oracle.hours': '331 hours',
+    'cert.oracle.d1': 'Personal development and soft skills.',
+    'cert.oracle.d2': 'Programming fundamentals.',
+    'cert.oracle.d3': 'Business agility and entrepreneurship.',
+    'cert.oracle.d4': 'Object-oriented Java.',
+    'cert.oracle.d5': 'Java with Spring Boot (G5).',
+ 
+    'cert.group.unah': 'UNAH',
+    'cert.unah.title': 'Computer Technical Support Workshop',
+    'cert.unah.org':   'National Autonomous University of Honduras',
+    'cert.unah.date':  'Completed: November 23, 2023',
+    'cert.unah.hours': '20 hours',
+ 
+    'cert.group.infop': 'INFOP',
+    'cert.infop.org':   'INFOP',
+    'cert.infop.elec.title':  'Residential Electrical Installations',
+    'cert.infop.elec.date':   'Completed: August 9, 2023',
+    'cert.infop.elec.hours':  '156 hours',
+    'cert.infop.web.title':   'Web Design with HTML5 and WordPress',
+    'cert.infop.web.date':    'Completed: March 1, 2024',
+    'cert.infop.web.hours':   '20 hours',
+    'cert.infop.cont.title':  'Basic Accounting for Non-Accountants',
+    'cert.infop.cont.date':   'Completed: March 15, 2024',
+    'cert.infop.cont.hours':  '20 hours',
+    'cert.infop.act.title':   'Positive Attitude with Emotional Intelligence',
+    'cert.infop.act.date':    'Completed: November 24, 2023',
+    'cert.infop.act.hours':   '20 hours',
+    'cert.infop.team.title':  'Teamwork',
+    'cert.infop.team.date':   'Completed: September 6, 2024',
+    'cert.infop.team.hours':  '20 hours',
+    'cert.infop.fin.title':   'Financial Education',
+    'cert.infop.fin.date':    'Completed: February 9, 2024 · USAID / ADELSAR / ILO',
+    'cert.infop.fin.hours':   '24 hours',
+ 
+    // Digital badges
+    'badge.os':      'Operating Systems Basics',
+    'badge.data':    'Introduction to Data Science',
+    'badge.network': 'Network Technician Career Path',
+    'badge.digital': 'Digital Immersion',
+    'badge.entrep':  'Entrepreneurship',
+    'badge.fintech': 'Fintech',
+  
+  },
+};

@@ -1,0 +1,88 @@
+---
+import { ui } from '../utils/i18n';
+
+const t = ui['es'];
+
+const softSkills = [
+  {
+    key: 'softskills.leadership',
+    icon: '🧭',
+    colorClass: 'from-blue-500/20 to-blue-600/5 border-blue-500/20 hover:border-blue-400/50',
+    dotClass: 'bg-blue-400',
+  },
+  {
+    key: 'softskills.teamwork',
+    icon: '🤝',
+    colorClass: 'from-emerald-500/20 to-emerald-600/5 border-emerald-500/20 hover:border-emerald-400/50',
+    dotClass: 'bg-emerald-400',
+  },
+  {
+    key: 'softskills.communication',
+    icon: '💬',
+    colorClass: 'from-violet-500/20 to-violet-600/5 border-violet-500/20 hover:border-violet-400/50',
+    dotClass: 'bg-violet-400',
+  },
+  {
+    key: 'softskills.problemsolving',
+    icon: '🔍',
+    colorClass: 'from-amber-500/20 to-amber-600/5 border-amber-500/20 hover:border-amber-400/50',
+    dotClass: 'bg-amber-400',
+  },
+  {
+    key: 'softskills.adaptability',
+    icon: '🔄',
+    colorClass: 'from-cyan-500/20 to-cyan-600/5 border-cyan-500/20 hover:border-cyan-400/50',
+    dotClass: 'bg-cyan-400',
+  },
+  {
+    key: 'softskills.selftaught',
+    icon: '📚',
+    colorClass: 'from-rose-500/20 to-rose-600/5 border-rose-500/20 hover:border-rose-400/50',
+    dotClass: 'bg-rose-400',
+  },
+];
+---
+
+<section id="softskills" class="max-w-6xl mx-auto px-6 py-24">
+
+  <div class="mb-16">
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.softskills">
+      {t['section.softskills']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+    <p class="text-gray-500 text-sm mt-4 max-w-xl" data-i18n="section.softskills.subtitle">
+      {t['section.softskills.subtitle']}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {softSkills.map((skill) => (
+      <div
+        class={`relative overflow-hidden rounded-2xl border bg-gradient-to-br p-6 transition-all duration-300 hover:scale-[1.02] cursor-default ${skill.colorClass}`}
+      >
+        <!-- Dot decorativo -->
+        <span class={`absolute top-4 right-4 w-2 h-2 rounded-full ${skill.dotClass} opacity-70`}></span>
+
+        <!-- Ícono -->
+        <div class="text-4xl mb-4 select-none">{skill.icon}</div>
+
+        <!-- Título -->
+        <h3
+          class="text-white font-bold text-base mb-1 tracking-wide"
+          data-i18n={skill.key}
+        >
+          {t[skill.key]}
+        </h3>
+
+        <!-- Descripción -->
+        <p
+          class="text-gray-400 text-sm leading-relaxed"
+          data-i18n={`${skill.key}.desc`}
+        >
+          {t[`${skill.key}.desc`]}
+        </p>
+      </div>
+    ))}
+  </div>
+
+</section>

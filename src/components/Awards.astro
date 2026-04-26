@@ -1,0 +1,136 @@
+---
+import { ui } from '../utils/i18n';
+const t = ui['es'];
+---
+
+<section id="premios" class="max-w-6xl mx-auto px-6 py-24">
+
+  <!-- Encabezado -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.awards">
+      {t['section.awards']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- ── Award 1: Olimpiada de Matemática ──────────────── -->
+    <div class="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/10 to-amber-600/5 p-8 hover:border-amber-400/50 hover:scale-[1.02] transition-all duration-300 group">
+
+      <!-- Brillo de fondo decorativo -->
+      <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-amber-400/10 blur-2xl pointer-events-none group-hover:bg-amber-400/20 transition-all duration-500"></div>
+
+      <!-- Medalla / ícono -->
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-3xl flex-shrink-0">
+          🥇
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400" data-i18n="award.math.category">
+            {t['award.math.category']}
+          </span>
+          <p class="text-white/40 text-xs mt-0.5" data-i18n="award.math.date">
+            {t['award.math.date']}
+          </p>
+        </div>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-white font-bold text-lg leading-snug mb-2" data-i18n="award.math.title">
+        {t['award.math.title']}
+      </h3>
+
+      <!-- Subtítulo / evento -->
+      <p class="text-amber-300/70 text-sm font-medium mb-3" data-i18n="award.math.event">
+        {t['award.math.event']}
+      </p>
+
+      <!-- Organiza -->
+      <p class="text-gray-500 text-xs leading-relaxed" data-i18n="award.math.org">
+        {t['award.math.org']}
+      </p>
+
+    </div>
+
+    <!-- ── Award 2: Coach Laboral / USAID ────────────────── -->
+    <div class="relative overflow-hidden rounded-2xl border border-hector-primary/20 bg-gradient-to-br from-hector-primary/10 to-hector-primary/5 p-8 hover:border-hector-primary/50 hover:scale-[1.02] transition-all duration-300 group">
+
+      <!-- Brillo de fondo decorativo -->
+      <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-hector-primary/10 blur-2xl pointer-events-none group-hover:bg-hector-primary/20 transition-all duration-500"></div>
+
+      <!-- Ícono -->
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-hector-primary/15 border border-hector-primary/30 flex items-center justify-center text-3xl flex-shrink-0">
+          🎓
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-hector-primary" data-i18n="award.coach.category">
+            {t['award.coach.category']}
+          </span>
+          <p class="text-white/40 text-xs mt-0.5" data-i18n="award.coach.date">
+            {t['award.coach.date']}
+          </p>
+        </div>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-white font-bold text-lg leading-snug mb-2" data-i18n="award.coach.title">
+        {t['award.coach.title']}
+      </h3>
+
+      <!-- Organiza -->
+      <p class="text-hector-primary/60 text-sm font-medium mb-4" data-i18n="award.coach.org">
+        {t['award.coach.org']}
+      </p>
+
+      <!-- Sesiones formativas -->
+      <div class="space-y-2">
+        {[1, 2, 3].map((n) => (
+          <div class="flex items-center gap-2.5 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+            <span class="w-5 h-5 rounded-full bg-hector-primary/20 border border-hector-primary/30 flex items-center justify-center text-hector-primary text-xs font-bold flex-shrink-0">
+              {n}
+            </span>
+            <span data-i18n={`award.coach.session${n}`}>{t[`award.coach.session${n}`]}</span>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ── Idiomas ──────────────────────────────────────────── -->
+  <div class="mt-10">
+    <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-5" data-i18n="award.languages.label">
+      {t['award.languages.label']}
+    </h3>
+
+    <div class="flex flex-wrap gap-4">
+      {[
+        { key: 'award.lang.es', flag: '🇭🇳', level: 'award.lang.es.level', barWidth: 'w-full' },
+        { key: 'award.lang.en', flag: '🇺🇸', level: 'award.lang.en.level', barWidth: 'w-3/4' },
+        { key: 'award.lang.zh', flag: '🇨🇳', level: 'award.lang.zh.level', barWidth: 'w-1/4' },
+      ].map((lang) => (
+        <div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:border-hector-primary/30 transition-all min-w-[220px] flex-1">
+          <span class="text-2xl select-none">{lang.flag}</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline mb-1.5">
+              <span class="text-white text-sm font-semibold" data-i18n={lang.key}>
+                {t[lang.key]}
+              </span>
+              <span class="text-gray-500 text-xs ml-2 whitespace-nowrap" data-i18n={lang.level}>
+                {t[lang.level]}
+              </span>
+            </div>
+            <!-- Barra de nivel -->
+            <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+              <div class={`h-full bg-violet-400 rounded-full ${lang.barWidth}`}></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+</section>

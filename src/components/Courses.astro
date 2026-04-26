@@ -1,0 +1,178 @@
+---
+import { ui } from '../utils/i18n';
+const t = ui['es'];
+
+const certGroups = [
+  {
+    groupKey: 'cert.group.oracle',
+    icon: '☕',
+    color: 'border-red-500/20 hover:border-red-400/40 from-red-500/10',
+    badgeColor: 'text-red-300 bg-red-500/10 border-red-500/20',
+    items: [
+      {
+        titleKey: 'cert.oracle.title',
+        orgKey:   'cert.oracle.org',
+        dateKey:  'cert.oracle.date',
+        hoursKey: 'cert.oracle.hours',
+        detailKeys: ['cert.oracle.d1','cert.oracle.d2','cert.oracle.d3','cert.oracle.d4','cert.oracle.d5'],
+        link: null,
+      },
+    ],
+  },
+  {
+    groupKey: 'cert.group.unah',
+    icon: '🎓',
+    color: 'border-hector-primary/20 hover:border-hector-primary/40 from-hector-primary/10',
+    badgeColor: 'text-hector-primary bg-hector-primary/10 border-hector-primary/20',
+    items: [
+      {
+        titleKey: 'cert.unah.title',
+        orgKey:   'cert.unah.org',
+        dateKey:  'cert.unah.date',
+        hoursKey: 'cert.unah.hours',
+        detailKeys: [],
+        link: null,
+      },
+    ],
+  },
+  {
+    groupKey: 'cert.group.infop',
+    icon: '🔧',
+    color: 'border-amber-500/20 hover:border-amber-400/40 from-amber-500/10',
+    badgeColor: 'text-amber-300 bg-amber-500/10 border-amber-500/20',
+    items: [
+      { titleKey:'cert.infop.elec.title',  orgKey:'cert.infop.org', dateKey:'cert.infop.elec.date',  hoursKey:'cert.infop.elec.hours',  detailKeys:[], link:null },
+      { titleKey:'cert.infop.web.title',   orgKey:'cert.infop.org', dateKey:'cert.infop.web.date',   hoursKey:'cert.infop.web.hours',   detailKeys:[], link:null },
+      { titleKey:'cert.infop.cont.title',  orgKey:'cert.infop.org', dateKey:'cert.infop.cont.date',  hoursKey:'cert.infop.cont.hours',  detailKeys:[], link:null },
+      { titleKey:'cert.infop.act.title',   orgKey:'cert.infop.org', dateKey:'cert.infop.act.date',   hoursKey:'cert.infop.act.hours',   detailKeys:[], link:null },
+      { titleKey:'cert.infop.team.title',  orgKey:'cert.infop.org', dateKey:'cert.infop.team.date',  hoursKey:'cert.infop.team.hours',  detailKeys:[], link:null },
+      { titleKey:'cert.infop.fin.title',   orgKey:'cert.infop.org', dateKey:'cert.infop.fin.date',   hoursKey:'cert.infop.fin.hours',   detailKeys:[], link:null },
+    ],
+  },
+];
+
+const digitalBadges = [
+  // Credly
+  { labelKey:'badge.os',      platform:'Credly',   url:'https://www.credly.com/badges/ea39c2ad-9c92-4f43-ab5b-2dbd32ad47ca',                                                                icon:'🖥️'  },
+  { labelKey:'badge.data',    platform:'Credly',   url:'https://www.credly.com/badges/affa9670-5da8-47fd-9e4e-76b1fe769d6e',                                                                icon:'📊'  },
+  { labelKey:'badge.network', platform:'Credly',   url:'https://www.credly.com/badges/f3653cc9-2c67-4490-9abc-2dba62327614',                                                                icon:'🌐'  },
+  // Parchment
+  { labelKey:'badge.digital', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/u1CUsth9Q4mW2dAyNL7l0Q',                                                             icon:'💡'  },
+  { labelKey:'badge.entrep',  platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/ywKk_ZS5T8STS8kh6yLTfA?identity__email=hrmartinezv@unah.hn',                         icon:'🚀'  },
+  { labelKey:'badge.fintech', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/J2Ug_6GXRsCWSHHB6XqLfg?identity__email=hrmartinezv@unah.hn',                         icon:'💳'  },
+];
+---
+
+<section id="cursos" class="max-w-6xl mx-auto px-6 py-24">
+
+  <!-- Encabezado -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.courses">
+      {t['section.courses']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+  </div>
+
+  <!-- Grupos de cursos -->
+  <div class="space-y-5 mb-16">
+    {certGroups.map((group) => (
+      <div class={`rounded-2xl border bg-gradient-to-br ${group.color} to-transparent transition-all duration-300`}>
+
+        <!-- Encabezado del grupo (colapsable) -->
+        <button
+          class="cert-toggle w-full flex items-center justify-between px-7 py-5 text-left"
+          data-group={group.groupKey}
+        >
+          <div class="flex items-center gap-3">
+            <span class="text-xl">{group.icon}</span>
+            <span class={`text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${group.badgeColor}`} data-i18n={group.groupKey}>
+              {t[group.groupKey]}
+            </span>
+          </div>
+          <svg class="cert-chevron transition-transform duration-300 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+
+        <!-- Contenido colapsable -->
+        <div class="cert-body overflow-hidden transition-all duration-500" style="max-height: 0px;" data-group={group.groupKey}>
+          <div class="px-7 pb-7 space-y-4 border-t border-white/5 pt-5">
+            {group.items.map((item) => (
+              <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6">
+                <!-- Dot -->
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/20 flex-shrink-0 hidden sm:block"></span>
+
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                    <h4 class="text-white font-semibold text-sm" data-i18n={item.titleKey}>
+                      {t[item.titleKey]}
+                    </h4>
+                    <span class="text-xs text-gray-600 whitespace-nowrap" data-i18n={item.hoursKey}>
+                      {t[item.hoursKey]}
+                    </span>
+                  </div>
+                  <p class="text-gray-500 text-xs mb-0.5" data-i18n={item.orgKey}>{t[item.orgKey]}</p>
+                  <p class="text-gray-600 text-xs" data-i18n={item.dateKey}>{t[item.dateKey]}</p>
+
+                  {item.detailKeys.length > 0 && (
+                    <ul class="mt-2 space-y-1">
+                      {item.detailKeys.map((dk) => (
+                        <li class="flex items-start gap-2 text-xs text-gray-500">
+                          <span class="mt-1 w-1 h-1 rounded-full bg-white/20 flex-shrink-0"></span>
+                          <span data-i18n={dk}>{t[dk]}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    ))}
+  </div>
+
+  <!-- Digital Badges -->
+  <div>
+    <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-5" data-i18n="cert.badges.label">
+      {t['cert.badges.label']}
+    </h3>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      {digitalBadges.map((badge) => (
+        <a
+          href={badge.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-hector-primary/40 hover:bg-hector-primary/5 transition-all duration-200 hover:scale-105 group text-center"
+        >
+          <span class="text-2xl">{badge.icon}</span>
+          <span class="text-xs text-gray-400 group-hover:text-white transition-colors leading-tight" data-i18n={badge.labelKey}>
+            {t[badge.labelKey]}
+          </span>
+          <span class="text-[10px] text-gray-600 group-hover:text-gray-400 transition-colors">{badge.platform}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</section>
+
+<script>
+  document.querySelectorAll('.cert-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id      = btn.getAttribute('data-group');
+      const body    = document.querySelector(`.cert-body[data-group="${id}"]`) as HTMLElement;
+      const chevron = btn.querySelector('.cert-chevron') as HTMLElement;
+      const isOpen  = body.style.maxHeight !== '0px' && body.style.maxHeight !== '';
+
+      if (isOpen) {
+        body.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>

@@ -1,0 +1,366 @@
+---
+import { ui } from '../utils/i18n';
+const t = ui['es'];
+
+const projects = [
+  {
+    id: 'sigref',
+    titleKey:  'proj.sigref.title',
+    shortKey:  'proj.sigref.short',
+    longKey:   'proj.sigref.long',
+    private:   true,
+    links:     [],
+    role:      'proj.sigref.role',
+    status:    'proj.status.active',
+    statusColor: 'bg-emerald-400',
+    tech: ['C# / .NET', 'PostgreSQL', 'MongoDB', 'Keycloak', 'Docker', 'FHIR R4/R5', 'HL7', 'Hangfire', 'Entity Framework', 'React', 'TypeScript', 'Tailwind CSS', 'Aspire', 'HapiFHIR'],
+    techColor:   'border-blue-500/30 text-blue-300 bg-blue-500/10',
+    borderHover: 'hover:border-blue-400/40',
+    gradFrom:    'from-blue-500/10',
+    images: [
+      { src: '/img/SIGREF/sigref-1.webp',  alt: 'SIGREF – Dashboard principal',  placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-2.webp',  alt: 'SIGREF – Gestión de pacientes', placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-3.webp',  alt: 'SIGREF – Reportes y KPIs',      placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-4.webp',  alt: 'SIGREF – Módulo de ingresos',   placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-5.webp',  alt: 'SIGREF – Usuarios',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-6.webp',  alt: 'SIGREF – Organizaciones',       placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-7.webp',  alt: 'SIGREF – FHIR Integration',     placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-8.webp',  alt: 'SIGREF – Empleados',            placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-9.webp',  alt: 'SIGREF – KPIs',                 placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-10.webp', alt: 'SIGREF – Auditoría',            placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-11.webp', alt: 'SIGREF – Keycloak',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-12.webp', alt: 'SIGREF – Reportes',             placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-13.webp', alt: 'SIGREF – Vista 13',             placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-14.webp', alt: 'SIGREF – Vista 14',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-15.webp', alt: 'SIGREF – Vista 15',             placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-16.webp', alt: 'SIGREF – Vista 16',             placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-17.webp', alt: 'SIGREF – Vista 17',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-18.webp', alt: 'SIGREF – Vista 18',             placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-19.webp', alt: 'SIGREF – Vista 19',             placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-20.webp', alt: 'SIGREF – Vista 20',             placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-21.webp', alt: 'SIGREF – Vista 21',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-22.webp', alt: 'SIGREF – Vista 22',             placeholder: '📊' },
+      { src: '/img/SIGREF/sigref-23.webp', alt: 'SIGREF – Vista 23',             placeholder: '🏥' },
+      { src: '/img/SIGREF/sigref-24.webp', alt: 'SIGREF – Vista 24',             placeholder: '👤' },
+    ],
+  },
+  {
+    id: 'classnotes',
+    titleKey:  'proj.classnotes.title',
+    shortKey:  'proj.classnotes.short',
+    longKey:   'proj.classnotes.long',
+    private:   false,
+    links: [
+      { label: 'Frontend Web',    url: 'https://github.com/TETvega/ClasssNotes-Startup-FE' },
+      { label: 'Frontend Mobile', url: 'https://github.com/TETvega/ClassNotes-Startup-FEM' },
+      { label: 'Backend',         url: 'https://github.com/TETvega/ClassNotes-Startup-BE' },
+    ],
+    role:      'proj.classnotes.role',
+    status:    'proj.status.active',
+    statusColor: 'bg-emerald-400',
+    tech: ['C# / .NET', 'SQL Server', 'React', 'React Native', 'TypeScript', 'Tailwind CSS', 'Geolocalización', 'QR'],
+    techColor:   'border-violet-500/30 text-violet-300 bg-violet-500/10',
+    borderHover: 'hover:border-violet-400/40',
+    gradFrom:    'from-violet-500/10',
+    images: [
+      { src: '/img/CLASSNOTES/classnotes-01.webp', alt: 'ClassNotes: Index',         placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-02.webp', alt: 'ClassNotes: Login',          placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-03.webp', alt: 'ClassNotes: Dashboard',      placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-04.webp', alt: 'ClassNotes: Asistencia QR',  placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-05.webp', alt: 'ClassNotes: Calificaciones', placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-06.webp', alt: 'ClassNotes: Vista 06',       placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-07.webp', alt: 'ClassNotes: Vista 07',       placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-08.webp', alt: 'ClassNotes: Vista 08',       placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-09.webp', alt: 'ClassNotes: Vista 09',       placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-10.webp', alt: 'ClassNotes: Vista 10',       placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-11.webp', alt: 'ClassNotes: Vista 11',       placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-12.webp', alt: 'ClassNotes: Vista 12',       placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-13.webp', alt: 'ClassNotes: Vista 13',       placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-14.webp', alt: 'ClassNotes: Vista 14',       placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-15.webp', alt: 'ClassNotes: Vista 15',       placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-16.webp', alt: 'ClassNotes: Vista 16',       placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-17.webp', alt: 'ClassNotes: Vista 17',       placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-18.webp', alt: 'ClassNotes: Vista 18',       placeholder: '📚' },
+      { src: '/img/CLASSNOTES/classnotes-19.webp', alt: 'ClassNotes: Vista 19',       placeholder: '📱' },
+      { src: '/img/CLASSNOTES/classnotes-20.webp', alt: 'ClassNotes: Vista 20',       placeholder: '📝' },
+    ],
+  },
+  {
+    id: 'rentals',
+    titleKey:  'proj.rentals.title',
+    shortKey:  'proj.rentals.short',
+    longKey:   'proj.rentals.long',
+    private:   false,
+    links: [
+      { label: 'Backend',  url: 'https://github.com/TETvega/FernandaRentals-Backend' },
+      { label: 'Frontend', url: 'https://github.com/annerh3/FernandaRentals-Frontend' },
+    ],
+    role:      'proj.rentals.role',
+    status:    'proj.status.finished',
+    statusColor: 'bg-sky-400',
+    tech: ['JavaScript', 'Tailwind CSS', 'C# / .NET', 'SQL Server', 'PayPal API', 'FullCalendar'],
+    techColor:   'border-amber-500/30 text-amber-300 bg-amber-500/10',
+    borderHover: 'hover:border-amber-400/40',
+    gradFrom:    'from-amber-500/10',
+    images: [
+      { src: '/img/FR/fr-1.webp', alt: 'Rentals – Catálogo',   placeholder: '🛒' },
+      { src: '/img/FR/fr-2.webp', alt: 'Rentals – Calendario', placeholder: '📅' },
+      { src: '/img/FR/fr-3.webp', alt: 'Rentals – Dashboard',  placeholder: '📈' },
+    ],
+  },
+];
+---
+
+<section id="proyectos" class="max-w-6xl mx-auto px-6 py-24">
+
+  <div class="mb-16">
+    <h2 class="text-3xl font-bold text-white mb-2" data-i18n="section.projects">
+      {t['section.projects']}
+    </h2>
+    <div class="w-20 h-1 bg-hector-primary/60"></div>
+  </div>
+
+  <div class="space-y-16">
+    {projects.map((proj) => (
+      <article
+        id={`proj-${proj.id}`}
+        class={`rounded-3xl border border-white/10 bg-gradient-to-b ${proj.gradFrom} to-transparent ${proj.borderHover} overflow-hidden transition-all duration-300`}
+      >
+
+        <!-- ── 1. HEADER: nombre, rol, estado, badge ──────── -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-6 pt-6 pb-4">
+
+          <!-- Izquierda: título + rol -->
+          <div>
+            <div class="flex items-center gap-3 flex-wrap">
+              <h3 class="text-white font-bold text-2xl leading-tight" data-i18n={proj.titleKey}>
+                {t[proj.titleKey]}
+              </h3>
+              <!-- Badge privado / público -->
+              {proj.private
+                ? <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/40">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span data-i18n="proj.private">Privado</span>
+                  </span>
+                : <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span data-i18n="proj.opensource">Open Source</span>
+                  </span>
+              }
+            </div>
+            <p class="text-gray-500 text-xs uppercase tracking-widest mt-1.5 font-medium" data-i18n={proj.role}>
+              {t[proj.role]}
+            </p>
+          </div>
+
+          <!-- Derecha: estado -->
+          <span class="inline-flex items-center gap-1.5 self-start sm:self-auto text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-400">
+            <span class={`w-1.5 h-1.5 rounded-full ${proj.statusColor} animate-pulse`}></span>
+            <span data-i18n={proj.status}>{t[proj.status]}</span>
+          </span>
+
+        </div>
+
+        <!-- ── 2. CARRUSEL FULL WIDTH ─────────────────────── -->
+        <div class="relative bg-black overflow-hidden group" data-carousel={proj.id}>
+
+          <!-- Track -->
+          <div
+            class="carousel-track flex transition-transform duration-500 ease-in-out"
+            data-track={proj.id}
+            style="will-change: transform;"
+          >
+            {proj.images.map((img) => (
+              <div class="carousel-slide flex-shrink-0 w-full flex items-center justify-center bg-black"
+                style="min-height: 240px;">
+                {img.src
+                  ? <img
+                      src={img.src}
+                      alt={img.alt}
+                      class="w-full max-h-[520px] object-contain block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  : (
+                    <div class="w-full flex flex-col items-center justify-center gap-3 select-none py-24">
+                      <span class="text-8xl opacity-20">{img.placeholder}</span>
+                      <span class="text-xs text-white/20 tracking-widest uppercase">{img.alt}</span>
+                    </div>
+                  )
+                }
+              </div>
+            ))}
+          </div>
+
+          <!-- Prev / Next -->
+          <button
+            class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/15 text-white/60 hover:text-white hover:bg-black/90 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+            data-proj={proj.id} aria-label="Anterior"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button
+            class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/15 text-white/60 hover:text-white hover:bg-black/90 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+            data-proj={proj.id} aria-label="Siguiente"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <!-- Counter -->
+          <div
+            class="carousel-counter absolute bottom-3 right-4 text-xs px-2.5 py-1 rounded-full bg-black/70 border border-white/10 text-white/50 z-10 tabular-nums select-none backdrop-blur-sm"
+            data-counter={proj.id}
+          >
+            1 / {proj.images.length}
+          </div>
+
+          <!-- Dots (solo si ≤ 8 slides) -->
+          <div class="carousel-dots-wrap absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10" data-dots={proj.id}>
+            {proj.images.map((_, idx) => (
+              <button
+                class={`carousel-dot rounded-full transition-all duration-300 ${idx === 0 ? 'bg-white w-5 h-1.5' : 'bg-white/30 w-1.5 h-1.5'}`}
+                data-proj={proj.id}
+                data-idx={idx}
+                aria-label={`Slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+        </div>
+
+        <!-- ── 3. INFO: descripción + expand + tech + links ── -->
+        <div class="px-6 py-6 space-y-5">
+
+          <!-- Descripción corta -->
+          <p class="text-gray-300 text-sm leading-relaxed" data-i18n={proj.shortKey}>
+            {t[proj.shortKey]}
+          </p>
+
+          <!-- Expand: descripción larga -->
+          <div>
+            <div
+              class="expand-wrapper overflow-hidden transition-all duration-500"
+              style="max-height: 0px;"
+              data-expand={proj.id}
+            >
+              <p class="text-gray-400 text-sm leading-relaxed pb-4 border-b border-white/5" data-i18n={proj.longKey}>
+                {t[proj.longKey]}
+              </p>
+            </div>
+
+            <!-- Botón "Ver más" — prominente -->
+            <button
+              class="expand-btn group/btn inline-flex items-center gap-2 mt-1 text-sm font-medium text-hector-primary hover:text-white border border-hector-primary/30 hover:border-hector-primary/70 hover:bg-hector-primary/10 px-4 py-2 rounded-full transition-all duration-200"
+              data-expand={proj.id}
+            >
+              <span class="expand-label" data-i18n="proj.readmore">{t['proj.readmore']}</span>
+              <svg class="expand-icon transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Separador -->
+          <div class="border-t border-white/5"></div>
+
+          <!-- Tech badges -->
+          <div class="flex flex-wrap gap-2">
+            {proj.tech.map((tech) => (
+              <span class={`text-xs px-2.5 py-1 rounded-md border font-medium ${proj.techColor}`}>{tech}</span>
+            ))}
+          </div>
+
+          <!-- Links a GitHub + nota privado -->
+          {proj.links.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {proj.links.map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
+
+          {proj.private && (
+            <p class="text-xs text-gray-600 italic flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="proj.private.note">{t['proj.private.note']}</span>
+            </p>
+          )}
+
+        </div>
+      </article>
+    ))}
+  </div>
+
+</section>
+
+<script>
+  // ── Carrusel ─────────────────────────────────────────────────
+  document.querySelectorAll('[data-track]').forEach((trackEl) => {
+    const track    = trackEl as HTMLElement;
+    const projId   = track.getAttribute('data-track')!;
+    let current    = 0;
+    const dots     = document.querySelectorAll(`.carousel-dot[data-proj="${projId}"]`);
+    const dotsWrap = document.querySelector(`.carousel-dots-wrap[data-dots="${projId}"]`) as HTMLElement | null;
+    const counter  = document.querySelector(`.carousel-counter[data-counter="${projId}"]`) as HTMLElement | null;
+    const total    = track.querySelectorAll('.carousel-slide').length;
+
+    if (dotsWrap && total > 8) dotsWrap.style.display = 'none';
+
+    function goTo(idx: number) {
+      current = (idx + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      if (counter) counter.textContent = `${current + 1} / ${total}`;
+      if (dotsWrap && total <= 8) {
+        dots.forEach((d, i) => {
+          const el = d as HTMLElement;
+          el.classList.toggle('bg-white',    i === current);
+          el.classList.toggle('w-5',         i === current);
+          el.classList.toggle('bg-white/30', i !== current);
+          el.classList.toggle('w-1.5',       i !== current);
+        });
+      }
+    }
+
+    document.querySelector(`.carousel-prev[data-proj="${projId}"]`)
+      ?.addEventListener('click', () => goTo(current - 1));
+    document.querySelector(`.carousel-next[data-proj="${projId}"]`)
+      ?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot) =>
+      dot.addEventListener('click', () =>
+        goTo(Number((dot as HTMLElement).getAttribute('data-idx')))
+      )
+    );
+  });
+
+  // ── Expandir descripción ──────────────────────────────────────
+  document.querySelectorAll('.expand-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id      = (btn as HTMLElement).getAttribute('data-expand')!;
+      const wrapper = document.querySelector(`.expand-wrapper[data-expand="${id}"]`) as HTMLElement;
+      const label   = btn.querySelector('.expand-label') as HTMLElement;
+      const icon    = btn.querySelector('.expand-icon') as HTMLElement;
+      const isOpen  = wrapper.style.maxHeight !== '0px' && wrapper.style.maxHeight !== '';
+      const lang    = localStorage.getItem('lang') || 'es';
+
+      if (isOpen) {
+        wrapper.style.maxHeight = '0px';
+        icon.style.transform    = 'rotate(0deg)';
+        label.textContent       = lang === 'en' ? 'Read more' : 'Ver más';
+        label.setAttribute('data-i18n', 'proj.readmore');
+      } else {
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        icon.style.transform    = 'rotate(180deg)';
+        label.textContent       = lang === 'en' ? 'Read less' : 'Ver menos';
+        label.setAttribute('data-i18n', 'proj.readless');
+      }
+    });
+  });
+</script>
