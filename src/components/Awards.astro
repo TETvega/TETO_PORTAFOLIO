@@ -1,5 +1,6 @@
 ---
 import { ui } from '../utils/i18n';
+import { GraduationCap, Trophy } from 'lucide-react';
 const t = ui['es'];
 ---
 
@@ -24,7 +25,7 @@ const t = ui['es'];
       <!-- Medalla / ícono -->
       <div class="flex items-center gap-4 mb-6">
         <div class="w-14 h-14 rounded-2xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-3xl flex-shrink-0">
-          🥇
+          <Trophy size={30} aria-hidden="true" />
         </div>
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-amber-400" data-i18n="award.math.category">
@@ -62,7 +63,7 @@ const t = ui['es'];
       <!-- Ícono -->
       <div class="flex items-center gap-4 mb-6">
         <div class="w-14 h-14 rounded-2xl bg-hector-primary/15 border border-hector-primary/30 flex items-center justify-center text-3xl flex-shrink-0">
-          🎓
+          <GraduationCap size={30} aria-hidden="true" />
         </div>
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-hector-primary" data-i18n="award.coach.category">

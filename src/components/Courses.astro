@@ -1,11 +1,12 @@
 ---
 import { ui } from '../utils/i18n';
+import { BarChart3, BookOpen, ChevronDown, CreditCard, Globe2, GraduationCap, Lightbulb, Monitor, Rocket, Wrench } from 'lucide-react';
 const t = ui['es'];
 
 const certGroups = [
   {
     groupKey: 'cert.group.oracle',
-    icon: '☕',
+    icon: 'book',
     color: 'border-red-500/20 hover:border-red-400/40 from-red-500/10',
     badgeColor: 'text-red-300 bg-red-500/10 border-red-500/20',
     items: [
@@ -21,7 +22,7 @@ const certGroups = [
   },
   {
     groupKey: 'cert.group.unah',
-    icon: '🎓',
+    icon: 'graduation',
     color: 'border-hector-primary/20 hover:border-hector-primary/40 from-hector-primary/10',
     badgeColor: 'text-hector-primary bg-hector-primary/10 border-hector-primary/20',
     items: [
@@ -37,7 +38,7 @@ const certGroups = [
   },
   {
     groupKey: 'cert.group.infop',
-    icon: '🔧',
+    icon: 'wrench',
     color: 'border-amber-500/20 hover:border-amber-400/40 from-amber-500/10',
     badgeColor: 'text-amber-300 bg-amber-500/10 border-amber-500/20',
     items: [
@@ -53,13 +54,13 @@ const certGroups = [
 
 const digitalBadges = [
   // Credly
-  { labelKey:'badge.os',      platform:'Credly',   url:'https://www.credly.com/badges/ea39c2ad-9c92-4f43-ab5b-2dbd32ad47ca',                                                                icon:'🖥️'  },
-  { labelKey:'badge.data',    platform:'Credly',   url:'https://www.credly.com/badges/affa9670-5da8-47fd-9e4e-76b1fe769d6e',                                                                icon:'📊'  },
-  { labelKey:'badge.network', platform:'Credly',   url:'https://www.credly.com/badges/f3653cc9-2c67-4490-9abc-2dba62327614',                                                                icon:'🌐'  },
+  { labelKey:'badge.os',      platform:'Credly',   url:'https://www.credly.com/badges/ea39c2ad-9c92-4f43-ab5b-2dbd32ad47ca',                                                                icon:'monitor'  },
+  { labelKey:'badge.data',    platform:'Credly',   url:'https://www.credly.com/badges/affa9670-5da8-47fd-9e4e-76b1fe769d6e',                                                                icon:'chart'  },
+  { labelKey:'badge.network', platform:'Credly',   url:'https://www.credly.com/badges/f3653cc9-2c67-4490-9abc-2dba62327614',                                                                icon:'globe'  },
   // Parchment
-  { labelKey:'badge.digital', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/u1CUsth9Q4mW2dAyNL7l0Q',                                                             icon:'💡'  },
-  { labelKey:'badge.entrep',  platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/ywKk_ZS5T8STS8kh6yLTfA?identity__email=hrmartinezv@unah.hn',                         icon:'🚀'  },
-  { labelKey:'badge.fintech', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/J2Ug_6GXRsCWSHHB6XqLfg?identity__email=hrmartinezv@unah.hn',                         icon:'💳'  },
+  { labelKey:'badge.digital', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/u1CUsth9Q4mW2dAyNL7l0Q',                                                             icon:'lightbulb'  },
+  { labelKey:'badge.entrep',  platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/ywKk_ZS5T8STS8kh6yLTfA?identity__email=hrmartinezv@unah.hn',                         icon:'rocket'  },
+  { labelKey:'badge.fintech', platform:'Parchment',url:'https://badges.parchment.eu/public/assertions/J2Ug_6GXRsCWSHHB6XqLfg?identity__email=hrmartinezv@unah.hn',                         icon:'credit'  },
 ];
 ---
 
@@ -84,12 +85,16 @@ const digitalBadges = [
           data-group={group.groupKey}
         >
           <div class="flex items-center gap-3">
-            <span class="text-xl">{group.icon}</span>
+            <span class="text-xl" aria-hidden="true">
+              {group.icon === 'book' && <BookOpen size={20} />}
+              {group.icon === 'graduation' && <GraduationCap size={20} />}
+              {group.icon === 'wrench' && <Wrench size={20} />}
+            </span>
             <span class={`text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${group.badgeColor}`} data-i18n={group.groupKey}>
               {t[group.groupKey]}
             </span>
           </div>
-          <svg class="cert-chevron transition-transform duration-300 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          <ChevronDown class="cert-chevron transition-transform duration-300 text-gray-500" size={16} aria-hidden="true" />
         </button>
 
         <!-- Contenido colapsable -->
@@ -146,7 +151,14 @@ const digitalBadges = [
           rel="noopener noreferrer"
           class="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-hector-primary/40 hover:bg-hector-primary/5 transition-all duration-200 hover:scale-105 group text-center"
         >
-          <span class="text-2xl">{badge.icon}</span>
+          <span class="text-2xl" aria-hidden="true">
+            {badge.icon === 'monitor' && <Monitor size={24} />}
+            {badge.icon === 'chart' && <BarChart3 size={24} />}
+            {badge.icon === 'globe' && <Globe2 size={24} />}
+            {badge.icon === 'lightbulb' && <Lightbulb size={24} />}
+            {badge.icon === 'rocket' && <Rocket size={24} />}
+            {badge.icon === 'credit' && <CreditCard size={24} />}
+          </span>
           <span class="text-xs text-gray-400 group-hover:text-white transition-colors leading-tight" data-i18n={badge.labelKey}>
             {t[badge.labelKey]}
           </span>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Languages } from 'lucide-react';
 
 export default function LanguageSelector() {
   const [lang, setLang] = useState<'es' | 'en'>('es');
@@ -25,10 +26,10 @@ export default function LanguageSelector() {
   return (
     <button
       onClick={toggleLang}
-      aria-label="Cambiar idioma"
+      aria-label={lang === 'es' ? 'Cambiar idioma' : 'Change language'}
       className="flex items-center gap-2 px-4 py-2 bg-teto-card border border-slate-700 rounded-full text-xs font-bold tracking-widest hover:border-teto-blue hover:text-teto-blue transition-all duration-200 hover:scale-105 text-slate-300"
     >
-      <span className="text-base leading-none">{lang === 'es' ? '🇺🇸' : '🇭🇳'}</span>
+      <Languages size={15} aria-hidden="true" />
       {lang === 'es' ? 'EN' : 'ES'}
     </button>
   );

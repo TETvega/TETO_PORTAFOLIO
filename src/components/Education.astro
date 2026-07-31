@@ -1,12 +1,13 @@
 ---
 import { ui } from '../utils/i18n';
+import { BarChart3, GraduationCap, School } from 'lucide-react';
 const t = ui['es'];
 
 const education = [
   {
     id: 'unah',
     type: 'university',
-    icon: '🎓',
+    icon: 'graduation',
     institutionKey: 'edu.unah.institution',
     degreeKey:      'edu.unah.degree',
     periodKey:      'edu.unah.period',
@@ -23,7 +24,7 @@ const education = [
   {
     id: 'admon',
     type: 'university',
-    icon: '📊',
+    icon: 'chart',
     institutionKey: 'edu.admon.institution',
     degreeKey:      'edu.admon.degree',
     periodKey:      'edu.admon.period',
@@ -40,7 +41,7 @@ const education = [
   {
     id: 'bach',
     type: 'highschool',
-    icon: '🏫',
+    icon: 'school',
     institutionKey: 'edu.bach.institution',
     degreeKey:      'edu.bach.degree',
     periodKey:      'edu.bach.period',
@@ -71,12 +72,20 @@ const education = [
       <div class={`relative overflow-hidden rounded-2xl border bg-gradient-to-br ${edu.accentFrom} to-transparent ${edu.borderColor} p-7 flex flex-col gap-5 transition-all duration-300 hover:scale-[1.01] group`}>
 
         <!-- Ícono decorativo de fondo -->
-        <span class="absolute -bottom-3 -right-3 text-8xl opacity-[0.06] select-none pointer-events-none">{edu.icon}</span>
+        <span class="absolute -bottom-3 -right-3 opacity-[0.06] select-none pointer-events-none" aria-hidden="true">
+          {edu.icon === 'graduation' && <GraduationCap size={112} />}
+          {edu.icon === 'chart' && <BarChart3 size={112} />}
+          {edu.icon === 'school' && <School size={112} />}
+        </span>
 
         <!-- Header -->
         <div class="flex items-start justify-between gap-3">
           <div class={`w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl flex-shrink-0`}>
-            {edu.icon}
+            <span aria-hidden="true">
+              {edu.icon === 'graduation' && <GraduationCap size={24} />}
+              {edu.icon === 'chart' && <BarChart3 size={24} />}
+              {edu.icon === 'school' && <School size={24} />}
+            </span>
           </div>
           <span class={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border font-medium mt-1 ${edu.badgeColor}`}>
             <span class={`w-1.5 h-1.5 rounded-full ${edu.statusColor} ${edu.progress < 100 ? 'animate-pulse' : ''}`}></span>

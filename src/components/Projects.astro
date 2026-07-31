@@ -1,8 +1,58 @@
----
+﻿---
 import { ui } from '../utils/i18n';
+import { ChevronDown, ChevronLeft, ChevronRight, FileText, GitBranch, LockKeyhole } from 'lucide-react';
 const t = ui['es'];
 
 const projects = [
+  {
+    id: 'IC_UPNFM',
+    titleKey: 'proj.ic_upnfm.title',
+    shortKey: 'proj.ic_upnfm.short',
+    longKey: 'proj.ic_upnfm.long',
+    private: false,
+    openSource: false,
+    labelKey: 'proj.ic_upnfm.label',
+    links: [],
+    role: 'proj.ic_upnfm.role',
+    status: 'proj.status.finished',
+    statusColor: 'bg-sky-400',
+    tech: ['Astro', 'HTML', 'CSS', 'JavaScript'],
+    techColor: 'border-cyan-500/30 text-cyan-300 bg-cyan-500/10',
+    borderHover: 'hover:border-cyan-400/40',
+    gradFrom: 'from-cyan-500/10',
+    images: [
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130231.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130241.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130249.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130302.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130312.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130327.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130337.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 130346.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 134037.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 134050.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 134118.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+      { src: '/img/ic_upnfm/Captura de pantalla 2026-07-31 134131.png', alt: 'IC_UPNFM – Vista del sitio', altKey: 'proj.ic_upnfm.image.alt' },
+    ],
+  },
+  {
+    id: 'technical-documentation',
+    titleKey: 'proj.docs.title',
+    shortKey: 'proj.docs.short',
+    longKey: 'proj.docs.long',
+    private: true,
+    labelKey: 'proj.docs.label',
+    links: [],
+    role: 'proj.docs.role',
+    status: 'proj.status.finished',
+    statusColor: 'bg-sky-400',
+    tech: ['Docusaurus', 'Markdown', 'MDX', 'Technical documentation', 'Information architecture'],
+    techColor: 'border-fuchsia-500/30 text-fuchsia-300 bg-fuchsia-500/10',
+    borderHover: 'hover:border-fuchsia-400/40',
+    gradFrom: 'from-fuchsia-500/10',
+    images: [],
+    icon: 'documentation',
+  },
   {
     id: 'sigref',
     titleKey:  'proj.sigref.title',
@@ -18,30 +68,30 @@ const projects = [
     borderHover: 'hover:border-blue-400/40',
     gradFrom:    'from-blue-500/10',
     images: [
-      { src: '/img/SIGREF/sigref-1.webp',  alt: 'SIGREF – Dashboard principal',  placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-2.webp',  alt: 'SIGREF – Gestión de pacientes', placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-3.webp',  alt: 'SIGREF – Reportes y KPIs',      placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-4.webp',  alt: 'SIGREF – Módulo de ingresos',   placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-5.webp',  alt: 'SIGREF – Usuarios',             placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-6.webp',  alt: 'SIGREF – Organizaciones',       placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-7.webp',  alt: 'SIGREF – FHIR Integration',     placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-8.webp',  alt: 'SIGREF – Empleados',            placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-9.webp',  alt: 'SIGREF – KPIs',                 placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-10.webp', alt: 'SIGREF – Auditoría',            placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-11.webp', alt: 'SIGREF – Keycloak',             placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-12.webp', alt: 'SIGREF – Reportes',             placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-13.webp', alt: 'SIGREF – Vista 13',             placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-14.webp', alt: 'SIGREF – Vista 14',             placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-15.webp', alt: 'SIGREF – Vista 15',             placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-16.webp', alt: 'SIGREF – Vista 16',             placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-17.webp', alt: 'SIGREF – Vista 17',             placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-18.webp', alt: 'SIGREF – Vista 18',             placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-19.webp', alt: 'SIGREF – Vista 19',             placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-20.webp', alt: 'SIGREF – Vista 20',             placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-21.webp', alt: 'SIGREF – Vista 21',             placeholder: '👤' },
-      { src: '/img/SIGREF/sigref-22.webp', alt: 'SIGREF – Vista 22',             placeholder: '📊' },
-      { src: '/img/SIGREF/sigref-23.webp', alt: 'SIGREF – Vista 23',             placeholder: '🏥' },
-      { src: '/img/SIGREF/sigref-24.webp', alt: 'SIGREF – Vista 24',             placeholder: '👤' },
+      { src: '/img/SIGREF/sigref-1.webp',  alt: 'SIGREF – Dashboard principal' },
+      { src: '/img/SIGREF/sigref-2.webp',  alt: 'SIGREF – Gestión de pacientes' },
+      { src: '/img/SIGREF/sigref-3.webp',  alt: 'SIGREF – Reportes y KPIs' },
+      { src: '/img/SIGREF/sigref-4.webp',  alt: 'SIGREF – Módulo de ingresos' },
+      { src: '/img/SIGREF/sigref-5.webp',  alt: 'SIGREF – Usuarios' },
+      { src: '/img/SIGREF/sigref-6.webp',  alt: 'SIGREF – Organizaciones' },
+      { src: '/img/SIGREF/sigref-7.webp',  alt: 'SIGREF – FHIR Integration' },
+      { src: '/img/SIGREF/sigref-8.webp',  alt: 'SIGREF – Empleados' },
+      { src: '/img/SIGREF/sigref-9.webp',  alt: 'SIGREF – KPIs' },
+      { src: '/img/SIGREF/sigref-10.webp', alt: 'SIGREF – Auditoría' },
+      { src: '/img/SIGREF/sigref-11.webp', alt: 'SIGREF – Keycloak' },
+      { src: '/img/SIGREF/sigref-12.webp', alt: 'SIGREF – Reportes' },
+      { src: '/img/SIGREF/sigref-13.webp', alt: 'SIGREF – Vista 13' },
+      { src: '/img/SIGREF/sigref-14.webp', alt: 'SIGREF – Vista 14' },
+      { src: '/img/SIGREF/sigref-15.webp', alt: 'SIGREF – Vista 15' },
+      { src: '/img/SIGREF/sigref-16.webp', alt: 'SIGREF – Vista 16' },
+      { src: '/img/SIGREF/sigref-17.webp', alt: 'SIGREF – Vista 17' },
+      { src: '/img/SIGREF/sigref-18.webp', alt: 'SIGREF – Vista 18' },
+      { src: '/img/SIGREF/sigref-19.webp', alt: 'SIGREF – Vista 19' },
+      { src: '/img/SIGREF/sigref-20.webp', alt: 'SIGREF – Vista 20' },
+      { src: '/img/SIGREF/sigref-21.webp', alt: 'SIGREF – Vista 21' },
+      { src: '/img/SIGREF/sigref-22.webp', alt: 'SIGREF – Vista 22' },
+      { src: '/img/SIGREF/sigref-23.webp', alt: 'SIGREF – Vista 23' },
+      { src: '/img/SIGREF/sigref-24.webp', alt: 'SIGREF – Vista 24' },
     ],
   },
   {
@@ -50,6 +100,7 @@ const projects = [
     shortKey:  'proj.classnotes.short',
     longKey:   'proj.classnotes.long',
     private:   false,
+    openSource: true,
     links: [
       { label: 'Frontend Web',    url: 'https://github.com/TETvega/ClasssNotes-Startup-FE' },
       { label: 'Frontend Mobile', url: 'https://github.com/TETvega/ClassNotes-Startup-FEM' },
@@ -63,26 +114,26 @@ const projects = [
     borderHover: 'hover:border-violet-400/40',
     gradFrom:    'from-violet-500/10',
     images: [
-      { src: '/img/CLASSNOTES/classnotes-01.webp', alt: 'ClassNotes: Index',         placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-02.webp', alt: 'ClassNotes: Login',          placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-03.webp', alt: 'ClassNotes: Dashboard',      placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-04.webp', alt: 'ClassNotes: Asistencia QR',  placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-05.webp', alt: 'ClassNotes: Calificaciones', placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-06.webp', alt: 'ClassNotes: Vista 06',       placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-07.webp', alt: 'ClassNotes: Vista 07',       placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-08.webp', alt: 'ClassNotes: Vista 08',       placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-09.webp', alt: 'ClassNotes: Vista 09',       placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-10.webp', alt: 'ClassNotes: Vista 10',       placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-11.webp', alt: 'ClassNotes: Vista 11',       placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-12.webp', alt: 'ClassNotes: Vista 12',       placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-13.webp', alt: 'ClassNotes: Vista 13',       placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-14.webp', alt: 'ClassNotes: Vista 14',       placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-15.webp', alt: 'ClassNotes: Vista 15',       placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-16.webp', alt: 'ClassNotes: Vista 16',       placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-17.webp', alt: 'ClassNotes: Vista 17',       placeholder: '📝' },
-      { src: '/img/CLASSNOTES/classnotes-18.webp', alt: 'ClassNotes: Vista 18',       placeholder: '📚' },
-      { src: '/img/CLASSNOTES/classnotes-19.webp', alt: 'ClassNotes: Vista 19',       placeholder: '📱' },
-      { src: '/img/CLASSNOTES/classnotes-20.webp', alt: 'ClassNotes: Vista 20',       placeholder: '📝' },
+      { src: '/img/CLASSNOTES/classnotes-01.webp', alt: 'ClassNotes: Index' },
+      { src: '/img/CLASSNOTES/classnotes-02.webp', alt: 'ClassNotes: Login' },
+      { src: '/img/CLASSNOTES/classnotes-03.webp', alt: 'ClassNotes: Dashboard' },
+      { src: '/img/CLASSNOTES/classnotes-04.webp', alt: 'ClassNotes: Asistencia QR' },
+      { src: '/img/CLASSNOTES/classnotes-05.webp', alt: 'ClassNotes: Calificaciones' },
+      { src: '/img/CLASSNOTES/classnotes-06.webp', alt: 'ClassNotes: Vista 06' },
+      { src: '/img/CLASSNOTES/classnotes-07.webp', alt: 'ClassNotes: Vista 07' },
+      { src: '/img/CLASSNOTES/classnotes-08.webp', alt: 'ClassNotes: Vista 08' },
+      { src: '/img/CLASSNOTES/classnotes-09.webp', alt: 'ClassNotes: Vista 09' },
+      { src: '/img/CLASSNOTES/classnotes-10.webp', alt: 'ClassNotes: Vista 10' },
+      { src: '/img/CLASSNOTES/classnotes-11.webp', alt: 'ClassNotes: Vista 11' },
+      { src: '/img/CLASSNOTES/classnotes-12.webp', alt: 'ClassNotes: Vista 12' },
+      { src: '/img/CLASSNOTES/classnotes-13.webp', alt: 'ClassNotes: Vista 13' },
+      { src: '/img/CLASSNOTES/classnotes-14.webp', alt: 'ClassNotes: Vista 14' },
+      { src: '/img/CLASSNOTES/classnotes-15.webp', alt: 'ClassNotes: Vista 15' },
+      { src: '/img/CLASSNOTES/classnotes-16.webp', alt: 'ClassNotes: Vista 16' },
+      { src: '/img/CLASSNOTES/classnotes-17.webp', alt: 'ClassNotes: Vista 17' },
+      { src: '/img/CLASSNOTES/classnotes-18.webp', alt: 'ClassNotes: Vista 18' },
+      { src: '/img/CLASSNOTES/classnotes-19.webp', alt: 'ClassNotes: Vista 19' },
+      { src: '/img/CLASSNOTES/classnotes-20.webp', alt: 'ClassNotes: Vista 20' },
     ],
   },
   {
@@ -91,6 +142,7 @@ const projects = [
     shortKey:  'proj.rentals.short',
     longKey:   'proj.rentals.long',
     private:   false,
+    openSource: true,
     links: [
       { label: 'Backend',  url: 'https://github.com/TETvega/FernandaRentals-Backend' },
       { label: 'Frontend', url: 'https://github.com/annerh3/FernandaRentals-Frontend' },
@@ -103,9 +155,9 @@ const projects = [
     borderHover: 'hover:border-amber-400/40',
     gradFrom:    'from-amber-500/10',
     images: [
-      { src: '/img/FR/fr-1.webp', alt: 'Rentals – Catálogo',   placeholder: '🛒' },
-      { src: '/img/FR/fr-2.webp', alt: 'Rentals – Calendario', placeholder: '📅' },
-      { src: '/img/FR/fr-3.webp', alt: 'Rentals – Dashboard',  placeholder: '📈' },
+      { src: '/img/FR/fr-1.webp', alt: 'Rentals – Catálogo' },
+      { src: '/img/FR/fr-2.webp', alt: 'Rentals – Calendario' },
+      { src: '/img/FR/fr-3.webp', alt: 'Rentals – Dashboard' },
     ],
   },
 ];
@@ -139,14 +191,15 @@ const projects = [
               <!-- Badge privado / público -->
               {proj.private
                 ? <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/40">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <LockKeyhole size={10} aria-hidden="true" />
                     <span data-i18n="proj.private">Privado</span>
                   </span>
-                : <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                : proj.openSource ? <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                    <GitBranch size={10} aria-hidden="true" />
                     <span data-i18n="proj.opensource">Open Source</span>
-                  </span>
+                  </span> : null
               }
+              {proj.labelKey && <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-hector-primary/10 border border-hector-primary/20 text-hector-primary/80" data-i18n={proj.labelKey}>{t[proj.labelKey]}</span>}
             </div>
             <p class="text-gray-500 text-xs uppercase tracking-widest mt-1.5 font-medium" data-i18n={proj.role}>
               {t[proj.role]}
@@ -162,7 +215,7 @@ const projects = [
         </div>
 
         <!-- ── 2. CARRUSEL FULL WIDTH ─────────────────────── -->
-        <div class="relative bg-black overflow-hidden group" data-carousel={proj.id}>
+        {proj.images.length > 0 ? <div class="relative bg-black overflow-hidden group" data-carousel={proj.id}>
 
           <!-- Track -->
           <div
@@ -177,6 +230,7 @@ const projects = [
                   ? <img
                       src={img.src}
                       alt={img.alt}
+                      data-i18n-alt={img.altKey}
                       class="w-full max-h-[520px] object-contain block"
                       loading="lazy"
                       decoding="async"
@@ -195,15 +249,15 @@ const projects = [
           <!-- Prev / Next -->
           <button
             class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/15 text-white/60 hover:text-white hover:bg-black/90 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
-            data-proj={proj.id} aria-label="Anterior"
+            data-proj={proj.id} aria-label="Anterior" data-i18n-aria-label="proj.carousel.previous"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            <ChevronLeft size={16} aria-hidden="true" />
           </button>
           <button
             class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/15 text-white/60 hover:text-white hover:bg-black/90 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
-            data-proj={proj.id} aria-label="Siguiente"
+            data-proj={proj.id} aria-label="Siguiente" data-i18n-aria-label="proj.carousel.next"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            <ChevronRight size={16} aria-hidden="true" />
           </button>
 
           <!-- Counter -->
@@ -226,7 +280,12 @@ const projects = [
             ))}
           </div>
 
-        </div>
+        </div> : <div class="flex min-h-[240px] items-center justify-center bg-gradient-to-br from-fuchsia-500/10 to-transparent px-6 text-center">
+          <div class="flex flex-col items-center gap-3 text-fuchsia-200/70">
+            <FileText size={48} strokeWidth={1.5} aria-hidden="true" />
+            <span class="text-xs uppercase tracking-[0.2em]" data-i18n="proj.docs.note">{t['proj.docs.note']}</span>
+          </div>
+        </div>}
 
         <!-- ── 3. INFO: descripción + expand + tech + links ── -->
         <div class="px-6 py-6 space-y-5">
@@ -254,9 +313,7 @@ const projects = [
               data-expand={proj.id}
             >
               <span class="expand-label" data-i18n="proj.readmore">{t['proj.readmore']}</span>
-              <svg class="expand-icon transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9"/>
-              </svg>
+              <ChevronDown className="expand-icon transition-transform duration-300" size={14} aria-hidden="true" />
             </button>
           </div>
 
@@ -280,7 +337,7 @@ const projects = [
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <GitBranch size={12} aria-hidden="true" />
                   {link.label}
                 </a>
               ))}
@@ -289,7 +346,7 @@ const projects = [
 
           {proj.private && (
             <p class="text-xs text-gray-600 italic flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <LockKeyhole size={11} aria-hidden="true" />
               <span data-i18n="proj.private.note">{t['proj.private.note']}</span>
             </p>
           )}

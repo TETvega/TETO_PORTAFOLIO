@@ -1,42 +1,43 @@
 ---
 import { ui } from '../utils/i18n';
+import { BookOpen, Compass, Handshake, MessageCircle, RefreshCw, Search } from 'lucide-react';
 
 const t = ui['es'];
 
 const softSkills = [
   {
     key: 'softskills.leadership',
-    icon: '🧭',
+    icon: 'compass',
     colorClass: 'from-blue-500/20 to-blue-600/5 border-blue-500/20 hover:border-blue-400/50',
     dotClass: 'bg-blue-400',
   },
   {
     key: 'softskills.teamwork',
-    icon: '🤝',
+    icon: 'handshake',
     colorClass: 'from-emerald-500/20 to-emerald-600/5 border-emerald-500/20 hover:border-emerald-400/50',
     dotClass: 'bg-emerald-400',
   },
   {
     key: 'softskills.communication',
-    icon: '💬',
+    icon: 'message',
     colorClass: 'from-violet-500/20 to-violet-600/5 border-violet-500/20 hover:border-violet-400/50',
     dotClass: 'bg-violet-400',
   },
   {
     key: 'softskills.problemsolving',
-    icon: '🔍',
+    icon: 'search',
     colorClass: 'from-amber-500/20 to-amber-600/5 border-amber-500/20 hover:border-amber-400/50',
     dotClass: 'bg-amber-400',
   },
   {
     key: 'softskills.adaptability',
-    icon: '🔄',
+    icon: 'refresh',
     colorClass: 'from-cyan-500/20 to-cyan-600/5 border-cyan-500/20 hover:border-cyan-400/50',
     dotClass: 'bg-cyan-400',
   },
   {
     key: 'softskills.selftaught',
-    icon: '📚',
+    icon: 'book',
     colorClass: 'from-rose-500/20 to-rose-600/5 border-rose-500/20 hover:border-rose-400/50',
     dotClass: 'bg-rose-400',
   },
@@ -64,7 +65,14 @@ const softSkills = [
         <span class={`absolute top-4 right-4 w-2 h-2 rounded-full ${skill.dotClass} opacity-70`}></span>
 
         <!-- Ícono -->
-        <div class="text-4xl mb-4 select-none">{skill.icon}</div>
+        <div class="text-4xl mb-4 select-none" aria-hidden="true">
+          {skill.icon === 'compass' && <Compass size={34} />}
+          {skill.icon === 'handshake' && <Handshake size={34} />}
+          {skill.icon === 'message' && <MessageCircle size={34} />}
+          {skill.icon === 'search' && <Search size={34} />}
+          {skill.icon === 'refresh' && <RefreshCw size={34} />}
+          {skill.icon === 'book' && <BookOpen size={34} />}
+        </div>
 
         <!-- Título -->
         <h3

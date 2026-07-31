@@ -1,11 +1,12 @@
 ---
 import { ui } from '../utils/i18n';
+import { Gift, Laptop } from 'lucide-react';
 const t = ui['es'];
 
 const volunteers = [
   {
     keyBase: 'vol.navidad',
-    icon: '🎄',
+    icon: 'gift',
     colorClass: 'from-red-500/15 to-red-600/5 border-red-500/20 hover:border-red-400/40',
     dotClass:   'bg-red-400',
     ringClass:  'ring-red-900/50',
@@ -13,7 +14,7 @@ const volunteers = [
   },
   {
     keyBase: 'vol.copan',
-    icon: '💻',
+    icon: 'laptop',
     colorClass: 'from-sky-500/15 to-sky-600/5 border-sky-500/20 hover:border-sky-400/40',
     dotClass:   'bg-sky-400',
     ringClass:  'ring-sky-900/50',
@@ -44,13 +45,13 @@ const volunteers = [
 
         <!-- Ícono decorativo de fondo -->
         <span class="absolute -bottom-4 -right-4 text-7xl opacity-10 select-none pointer-events-none">
-          {vol.icon}
+          {vol.icon === 'gift' ? <Gift size={64} aria-hidden="true" /> : <Laptop size={64} aria-hidden="true" />}
         </span>
 
         <!-- Header -->
         <div class="flex items-start gap-4 mb-5">
           <div class={`w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl flex-shrink-0 ring-4 ${vol.ringClass}`}>
-            {vol.icon}
+            {vol.icon === 'gift' ? <Gift size={24} aria-hidden="true" /> : <Laptop size={24} aria-hidden="true" />}
           </div>
           <div>
             <h3 class="text-white font-bold text-base leading-snug" data-i18n={`${vol.keyBase}.title`}>
